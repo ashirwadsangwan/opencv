@@ -2,6 +2,11 @@ import cv2
 import numpy as np
 
 cap = cv2.VideoCapture(0)
+"""
+You can add a video path instead of "0" in the VideoCapture
+if you want to process an existing video file.
+"""
+
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
 out = cv2.VideoWriter('output.mp4', fourcc, 20.0, (720, 560))
 
