@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-cap = CV2.VideoCapture(0)
+cap = cv2.VideoCapture(0)
 
 """
 '0' is here for your primary webcam. Now we'll enter into a
@@ -10,7 +10,7 @@ while loop to get the VideoCapture working.
 """
 
 while True:
-    return, frame = cap.read()
+    ret, frame = cap.read()
     cv2.imshow('frame', frame)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
