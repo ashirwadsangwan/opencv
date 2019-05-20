@@ -8,7 +8,7 @@ if you want to process an existing video file.
 """
 
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
-out = cv2.VideoWriter('output.mp4', fourcc, 20.0, (720, 560))
+out = cv2.VideoWriter('output.avi', fourcc, 20.0, (720, 560))
 
 """
 '0' is here for your primary webcam. Now we'll enter into a
@@ -19,7 +19,7 @@ while loop to get the VideoCapture working.
 while True:
     ret, frame = cap.read()
     gray = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
-    out.write(gray)
+    out.write(frame)
     cv2.imshow('frame', frame)
     cv2.imshow('gray', gray)
 
